@@ -20,3 +20,7 @@ cp $DOTS/.gitconfig $HOME/.gitconfig
 git config --global user.email $GIT_AUTHOR_EMAIL
 git config --global user.name "$GIT_AUTHOR_NAME"
 
+# bash aliases
+if ! grep -P 'dots/.bashrc' $HOME/.bashrc &> /dev/null; then
+  echo 'source $HOME/dots/.bashrc' >> $HOME/.bashrc;
+fi
